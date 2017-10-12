@@ -5,10 +5,10 @@
     <p>No tasks yet</p>
 {% else %}
     
-{% for titles in blogs %}
-    <a href="/main-blog?={{titles.id}}" class="main-title">
-    <h3>{{titles.title}}</h3>
-    <p>{{titles.body}}</p> </a>
+{% for blog in blogs %}
+    <a href="/main-blog?id={{blog.id}}" class="main-title">
+    <h3>{{blog.title}}</h3> </a>
+    <p>{{blog.body}}</p> 
     <hr/>
     
 {% endfor %}
