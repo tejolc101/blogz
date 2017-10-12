@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style type="text/css">
+            body {
+               font-family: sans-serif;
+               width: 800px;
+               margin: 0 auto;
+               padding: 10px;
+               background-color: #F0F8FF;
+             }
+             .error {
+               color: red;
+             }
+             label {
+               display: block;
+               font-size: 20px;
+             }
+             h1 {
+                 font-size: 24px;
+                 font-weight: bold;
+                 margin-bottom: 20px;
+                 text-align: center;
+             }
+            
+             input[type=text] {
+                 width: 500px;
+                 font-size: 20px;
+                 padding: 2px;
+                 
+             }
+             textarea {
+           
+               width: 500px;
+               height: 300px;
+               font-size: 20px;
+               
+             }
+            .main-title {
+                display: block;
+                color:#222;
+               
+           
+                font-weight: bold;
+                text-align: left;
+                margin-bottom: 15px;
+                text-decoration: none;
+            }
+           
+           
+           </style>
+    </head>
+<body>
+
+        <a href="/main-blog"  class="main-title">
+            Main Blog Page
+        </a>
+        
+        
+        <a href="/new-post" class="main-title">
+            Add a blog entry
+        </a> 
+        <h1>Build a Blog</h1>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

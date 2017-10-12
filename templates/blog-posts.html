@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if blogs|length == 0 %}
+    <p>No tasks yet</p>
+{% else %}
+    
+{% for titles in blogs %}
+    <a href="/main-blog?={{titles.id}}" class="main-title">
+    <h3>{{titles.title}}</h3>
+    <p>{{titles.body}}</p> </a>
+    <hr/>
+    
+{% endfor %}
+
+
+{% endif %}
+   
+
+
+
+
+{% endblock %}
