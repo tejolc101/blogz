@@ -55,11 +55,8 @@ def new_blog():
         
         title_name = request.args.get('title')
         body_name = request.args.get('body')
-        new_body = Blog(title_name, body_name)
-        db.session.add(new_body)
-        db.session.commit()
-        new_title = Blog.query.filter_by(title=title_name).first() 
-        blog_id = new_title.id
+       
+        
         
 
         if title_name == "":
@@ -68,7 +65,11 @@ def new_blog():
             error_body = "Please fill int the content"
 
         if not error_title and not error_body:
-           
+            new_body = Blog(title_name, body_name)
+            db.session.add(new_body)
+            db.session.commit()
+            new_title = Blog.query.filter_by(title=title_name).first() 
+            blog_id = new_title.id
             return redirect('/main-blog?id={0}'.format(blog_id))
             #return render_template("new-post.html",blog=new_body)
         else:
