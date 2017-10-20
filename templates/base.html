@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{title}}</title>
+        <title>Blogz</title>
         <style type="text/css">
             body {
                font-family: sans-serif;
@@ -21,11 +21,17 @@
                  font-size: 24px;
                  font-weight: bold;
                  margin-bottom: 20px;
-                 text-align: center;
+                 text-align: left;
              }
             
              input[type=text] {
-                 width: 500px;
+                 width: 200px;
+                 font-size: 20px;
+                 padding: 2px;
+                 
+             }
+             input[type=password] {
+                 width: 200px;
                  font-size: 20px;
                  padding: 2px;
                  
@@ -38,8 +44,9 @@
                
              }
             .main-title {
-                display: block;
-                color:#222;
+                
+                padding-right: 30px;
+                color:blue;
                
            
                 font-weight: bold;
@@ -48,7 +55,12 @@
                 
             }
             a:hover{
-                color:blue;
+                color:green;
+            }
+            .log{
+                
+                float:right;
+                padding-right: 30px;
             }
            
            
@@ -56,6 +68,17 @@
     </head>
 <body>
 
+       
+        <a href="/logout" class="log">
+              Logout   
+        </a>
+        
+        <a href="/login" class ="log">
+            Login   
+        </a>
+        <a href="/" class = "main-title">
+            Home
+        </a>
         <a href="/main-blog"  class="main-title">
             Main Blog Page
         </a>
@@ -64,7 +87,7 @@
         <a href="/new-post" class="main-title">
             Add a blog entry
         </a> 
-        <h1>Build a Blog</h1>
+        <h1>{{heading}}</h1>
     {% block content %}
     {% endblock %}
 

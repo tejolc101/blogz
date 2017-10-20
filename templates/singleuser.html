@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Display all the blogs of a single user -->
+{% if blogs|length == 0 %}
+<p>No tasks yet</p>
+{% else %}
+
+{% for blog in blogs %}
+<a href="/main-blog?id={{blog.id}}" class="main-title">
+<h3>{{blog.title}}</h3> 
+</a>
+<p>{{blog.body}}</p>
+<p>Written by 
+    <a href="/main-blog?user={{user_name}}" class="main-title">
+        {{user_name}}</a>
+</p> 
+<hr/>
+
+{% endfor %}
+
+
+{% endif %}
+
+
+{% endblock %}

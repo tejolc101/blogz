@@ -7,8 +7,12 @@
     
 {% for blog in blogs %}
     <a href="/main-blog?id={{blog.id}}" class="main-title">
-    <h3>{{blog.title}}</h3> </a>
+    <h3>{{blog.title}}</h3></a>
     <p>{{blog.body}}</p> 
+    <p>Written by 
+            <a href="/main-blog?user={{blog.username}}" class="main-title">
+                {{blog.username}}</a>
+    </p>
     <hr/>
     
 {% endfor %}
